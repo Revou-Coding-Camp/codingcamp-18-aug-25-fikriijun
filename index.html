@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        
+        <form id="todoForm" class="todo-form">
+            <div class="form-group">
+                <label for="taskInput">Task:</label>
+                <input type="text" id="taskInput" placeholder="Enter your task..." required>
+                <span class="error-message" id="taskError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="dateInput">Due Date:</label>
+                <input type="date" id="dateInput" required>
+                <span class="error-message" id="dateError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="priorityInput">Priority:</label>
+                <select id="priorityInput">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="filter-controls">
+            <label for="filterSelect">Filter by:</label>
+            <select id="filterSelect">
+                <option value="all">All Tasks</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+            </select>
+            
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+        </div>
+        <div class="sort-controls">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="date">Due Date</option>
+                <option value="priority">Priority</option>
+            </select>
+        <div class="todo-container">
+            <ul id="todoList" class="todo-list"></ul>
+            <div id="emptyMessage" class="empty-message">No tasks yet. Add one above!</div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 To-Do List Application</p>
+    <script src="js\script.js"></script>
+</body>
+</html>
